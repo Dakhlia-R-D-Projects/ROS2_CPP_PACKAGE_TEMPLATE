@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.22)
-get_filename_component(PKG_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME) # Get the name of package automatically from the directory name in variable PKG_NAME
-project(PKG_NAME)
-cmake_policy(SET CMP0079 NEW)
 
+set (PKG_NAME cpp_template_pkg)
 set (MAIN_EXECUTABLE_NAME main)
+
+project(${PKG_NAME})
+cmake_policy(SET CMP0079 NEW)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
