@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
-project(cpp_template_pkg)
+get_filename_component(PKG_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME) # Get the name of package automatically from the directory name in variable PKG_NAME
+project(PKG_NAME)
 cmake_policy(SET CMP0079 NEW)
 
 set (MAIN_EXECUTABLE_NAME main)
