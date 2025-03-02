@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.22)
 project(cpp_template_pkg)
 cmake_policy(SET CMP0079 NEW)
 
+set (MAIN_EXECUTABLE_NAME main)
+
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
@@ -19,16 +21,16 @@ install(
   DESTINATION include
 )
 
-add_executable(talker src/talker.cpp) # Create the talker executable
+add_executable(${MAIN_EXECUTABLE_NAME} src/main.cpp) # Create the talker executable
 
-target_include_directories(talker PUBLIC
+target_include_directories(${MAIN_EXECUTABLE_NAME} PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
 )
 
-LibraryLinker(talker)
+LibraryLinker(${MAIN_EXECUTABLE_NAME})
 
-install(TARGETS talker
+install(TARGETS ${MAIN_EXECUTABLE_NAME}
   DESTINATION lib/${PROJECT_NAME}
 )
 
