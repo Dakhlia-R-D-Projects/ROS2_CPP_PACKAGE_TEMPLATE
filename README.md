@@ -10,6 +10,10 @@ The porpose of this project is to facilitate the structured **ros2 c++ project**
    ```bash
    set (MAIN_EXECUTABLE_NAME Any_name_you_want)
    ```
+7. Change the name of the pkg in the following variable into the name of your created pkg
+   ```
+   set (PKG_NAME the_name_of_created_pkg)
+   ```
 Finally Enjoy your distributed ros2 cpp project easily
 # Illustration Video
 
