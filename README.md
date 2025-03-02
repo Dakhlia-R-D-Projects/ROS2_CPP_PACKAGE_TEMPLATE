@@ -14,6 +14,8 @@ The porpose of this project is to facilitate the structured **ros2 c++ project**
    ```bash
    set (PKG_NAME the_name_of_created_pkg)
    ```
+8. ```colcon build --symlink-install ```
 Finally Enjoy your distributed ros2 cpp project easily
 # Illustration Video
 
+[Screencast from 03-02-2025 09:36:22 PM.webm](https://github.com/user-attachments/assets/1a313ae3-8ce4-476e-b99f-f6d523a31a73)
